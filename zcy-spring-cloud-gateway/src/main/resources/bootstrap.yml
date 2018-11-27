@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zcy_gateway
+  cloud:
+    zookeeper:
+      discovery:
+        root: spring-cloud-service
+      connect-string: zookeeper1.configure.com:10011,zookeeper2.configure.com:10011,zookeeper3.configure.com:10011

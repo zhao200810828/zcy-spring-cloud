@@ -1,0 +1,26 @@
+server:
+  port: 8080
+zuul:
+  routes:
+    demo-feign-freeservice:
+      path: /api-service/**
+    user-service:
+      path: /ZCY_USER_SERVICE/**
+      serviceId: ZCY_USER_SERVICE
+    163:
+      path: /163
+      url: http://www.163.com/
+  ratelimit:
+    enabled: true
+    behindProxy: true
+    repository: REDIS #使用redis存储，一定要大写！
+    policies:
+  #  policyList:
+      user-service: #针对上面那个服务的限流
+        limit: 10 #每秒多少个请求
+        quoto: 5
+        refreshInterval: 60
+        type:
+          - ORIGIN
+logging:
+  level: debug

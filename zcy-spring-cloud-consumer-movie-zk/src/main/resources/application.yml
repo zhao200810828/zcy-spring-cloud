@@ -1,0 +1,12 @@
+server:
+  port: 12124
+spring:
+  application:
+    name: ZCY_MOVIE
+  cloud:
+    zookeeper:
+      discovery:
+        root: spring-cloud-service
+      connect-string: zookeeper1.configure.com:10011,zookeeper2.configure.com:10011,zookeeper3.configure.com:10011
+
+
