@@ -9,8 +9,8 @@ spring:
           search-paths: /**
         default-application-name: configServer
       label: master
-      username: zhao200810828
-      password: zhao626597
+      username: xxxxxxxxxxxxxx
+      password: xxxxxxxxxx
 eureka:
   client:
     service-url:
